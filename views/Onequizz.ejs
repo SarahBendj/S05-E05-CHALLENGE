@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Votre Quizz<%= OneQuiz.title %> </h1> 
+    <h2>  <%= OneQuiz.description %> </h2>
+  
+   <h3> l'auteur de ce quiz<%= OneQuiz.users.firstname %> ,<%= OneQuiz.users.lastname %> </h3>
+   
+    <% for( const item of OneQuiz.questions ) { %>
+       <li> <%= item.description %> </li>
+       <li> <%= item.anecdote %> </li>
+       
+    
+    <% } %>
+   
+    <% for( item of questionId.answers ) { %>
+        <li>  => :<%= item.description %> </li>
+    
+    <% } %>
+    
+
+    
+    
+</body>
+</html>
